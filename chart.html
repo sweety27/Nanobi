@@ -1,23 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
-<head>
-  <title>Dashboard</title>
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body ng-controller="myCtrl">
-  <div class="col-md-8 col-md-offset-4" ng-init="readCSV()" style="margin-top:5%;">
-    <div google-chart chart="chart" style="border:1px inset black;padding:0;width:400px">
-    </div>
-  </div>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.8/angular-filter.js"></script>
-  <script type="text/javascript" src="js/data.js"></script>
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script type="text/javascript" src="https://rawgit.com/pablojim/highcharts-ng/master/src/highcharts-ng.js"></script>
-  <script src="https://code.highcharts.com/highcharts-more.js"></script>
-  <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-  <script src="http://bouil.github.io/angular-google-chart/ng-google-chart.js"></script>
-</body>
+<html lang="en">
+    <head>
+         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js" type="text/javascript"></script>
+         <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+         <script type="text/javascript" src="data.js"></script>
+    </head>
+    <body ng-controller="IndexCtrl" ng-init="readCSV()">
+        <div id="visualization"></div>
+    </body>
 </html>
